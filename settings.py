@@ -86,13 +86,14 @@ WSGI_APPLICATION = 'MailChimpProject.wsgi.application'
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-'NAME': 'mailing',
+'NAME': os.getenv('DB_NAME'),
 'USER': 'postgres',
-'PASSWORD': 'Kirill',
+'PASSWORD': os.getenv('DB_PASSWORD'),
 'HOST': '127.0.0.1',
 'PORT': '5432'
 }
 
+    
 }
 LOGGING = {
 
