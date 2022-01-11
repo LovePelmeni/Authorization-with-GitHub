@@ -210,8 +210,6 @@ def is_user_follower(request, username):
 
     followers_list = get_user_followers_list(request, username)
     users = CustomUser.objects.annotate(is_friend=models.Value(True if F('username') in followers_list else False))
-    print(type(users))
-    print(users)
 
     return users
 
