@@ -31,11 +31,6 @@ import os
 os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 logger = logging.getLogger(__name__)
-#
-# GOOGLE_TOKEN_URL = "https://oauth2.googleapis.com/token"
-# GOOGLE_AUTHORIZATION_URL = "https://accounts.google.com/o/oauth2/auth"
-#
-# GOOGLE_RESOURCE_SERVER_URL = 'https://www.googleapis.com/auth/userinfo.profile'
 
 import requests
 from oauthlib.oauth2 import WebApplicationClient
