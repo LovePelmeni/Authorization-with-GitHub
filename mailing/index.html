@@ -1,0 +1,17 @@
+{% extends 'mailing/base.html' %}
+
+{{ title }}
+
+{{ banner }}
+
+
+{% block content %}
+
+<div class="wrapper">
+    <button class="button"> <a href="{% url 'mailing:send_auth_request' %}">Authorize with Github</a> </button>
+
+</div>
+
+
+{% endblock %}
+

@@ -1,0 +1,23 @@
+{% extends 'mailing/base.html' %}
+
+{{ title }}
+
+{{ banner }}
+
+{% block content %}
+
+{% if user %}
+
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ user.get_image_url }}" alt="">
+        <div class="card-body">
+            <h5 class="card-title">{{ user.username }}</h5>
+            <h5 class="card-title">{{ user.email }}</h5>
+            <h5 class="card-title">Followers from GitHub: {{ count_followers }}</h5>
+
+        </div>
+    </div>
+
+{% endif %}
+
+{% endblock %}
