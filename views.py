@@ -112,7 +112,6 @@ def authorize_user(request, response):
         if auth_data['username'] not in usernames_list:
             user = CustomUser.objects.create_user(**auth_data)
             logger.debug('user has been created')
-            #add_user_to_mailing(request, {"username": user.username})
 
         else:
             user = authenticate(request, **auth_data, google_confirmed=True)
@@ -126,7 +125,6 @@ def authorize_user(request, response):
 
     except JSONDecodeError as json_err:
         logger.error(msg=json_err.msg)
-        #Except there is some problems with decode adding new error message to logger var.
 
     return redirect(request.META.get('HTTP_REFERER'))
 
