@@ -1,5 +1,5 @@
 # Authorization-with-GitHub
-This is a small project, authorization with your github account on website.
+This is a small project, authorization with your github account on website. (OAuth Authentication)
 
 To implement this i've used libraries:
 
